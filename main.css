@@ -2,13 +2,16 @@ body {
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
     Helvetica Neue, sans-serif;
   font-size: 14px;
-  background: linear-gradient(0deg, #fff 0%, #fff 50%, #000 50%, #000 100%);
+  background: linear-gradient(0deg, #fff 70%, #000 30%);
   word-break: keep-all;
 }
 img {
   display: block;
 }
-
+a{
+  text-decoration: none;
+  color:#000;
+}
 .btn {
   border: 1px solid;
   border-radius: 0.5rem;
@@ -23,7 +26,6 @@ img {
 
 .wrapper {
   padding: 1rem 5rem;
-
   color: #fff;
   position: relative;
 }
@@ -37,6 +39,7 @@ img {
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
+  color:#fff;
 }
 .navigation h1 a:hover {
   color: #c8c8c8;
@@ -81,6 +84,7 @@ img {
   cursor: pointer;
   padding: 0rem 2rem;
   position: relative;
+  
 }
 
 .navigation--info--center li:first-child::before {
@@ -91,6 +95,49 @@ img {
   width: 20px;
   border-bottom: 3px solid;
 }
+
+.navigation--info--center li:nth-child(2){
+  transition: .4s;
+}
+
+.navigation--info--center li:nth-child(2)::before{
+  position: absolute;
+  top: 24px;
+  right: 44px;
+  content: '';
+  width: 0;
+  border-bottom: 1px solid;
+  transition: .2s;
+}
+.navigation--info--center li:nth-child(2):hover::before {
+  position: absolute;
+  top: 24px;
+  right: 44px;
+  content: '';
+  width: 5px;
+  border-bottom: 1px solid;
+ 
+}
+
+.navigation--info--center li:nth-child(3)::before{
+  position: absolute;
+  top: 24px;
+  right: 64px;
+  content: '';
+  width: 0;
+  border-bottom: 1px solid;
+  transition: .2s;
+}
+
+.navigation--info--center li:nth-child(3):hover::before {
+  position: absolute;
+  top: 24px;
+  right: 64px;
+  content: '';
+  width: 5px;
+  border-bottom: 1px solid;
+}
+
 
 .navigation--info--right {
   display: flex;
@@ -155,14 +202,12 @@ img {
 }
 
 .navigation--lodging {
-  width: 70%;
-  max-width: 1120px;
 }
 
 .navigation--lodging ul {
   display: flex;
   border-radius: 50px;
-  justify-content: space-around;
+  justify-content: center;
   border: 1px solid;
   box-sizing: border-box;
   background-color: #fff;
@@ -174,8 +219,7 @@ img {
 
 .navigation--lodging ul li {
   position: relative;
-  margin-left: 0.5rem;
-  padding: 1.2rem 1.5rem;
+  padding: 1.2rem 7rem 1.2rem 1rem;
   line-height: 0.5;
   cursor: pointer;
 }
@@ -188,23 +232,26 @@ img {
   content: '';
   width: 1px;
   height: 2rem;
-  color: rgb(200, 200, 200);
+  color: #dcdcdc;
   border-left: 1px solid;
-  right: -6px;
+  right: -2px;
 }
 
 .navigation--lodging ul li:nth-child(1) {
-  flex-basis: 0;
-  flex-grow: 3;
+  flex-basis: 1;
+  flex-grow: 4;
+  
 }
 
 .navigation--lodging ul li:nth-child(2) {
-  flex-basis: 0;
-  flex-grow: 2;
+  flex-basis: 1;
+  flex-grow: 1.5;
+
 }
 .navigation--lodging ul li:nth-child(3) {
-  flex-basis: 0;
-  flex-grow: 2;
+  flex-basis: 1;
+  flex-grow: 1.5;
+
 }
 
 .navigation--lodging ul li:nth-child(3)::before {
@@ -212,8 +259,9 @@ img {
 
 .navigation--lodging ul li:nth-child(4) {
   position: relative;
-  flex-basis: 0;
-  flex-grow: 3;
+  flex-basis: 1;
+  flex-grow:3;
+
 }
 .navigation--lodging ul li:nth-child(4)::before {
   display: none;
@@ -226,6 +274,7 @@ img {
   right: 10px;
   bottom: 8px;
   border: 0;
+  cursor: pointer;
 }
 .navigation--lodging ul li:nth-child(4) svg {
   color: white;
@@ -322,7 +371,6 @@ img {
 }
 
 .travel-banner {
-  margin-top: 3.5rem;
 }
 
 .travel-banner .travel-title {
@@ -471,4 +519,161 @@ img {
   color: #000;
   font-weight: bold;
   font-size: 16px;
+}
+.superhost-banner{
+  
+ display: grid;
+ grid-template-columns: 1fr ;
+ grid-template-rows: 1fr ;
+ grid-auto-rows: auto 1fr ;
+ margin-top: 5rem;
+ background-image: url("./images/superhost.jpg");
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ border-radius: 10px;
+ padding: 100px 500px 300px 100px;
+
+}
+
+.superhost-banner .superhost-title{
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.superhost-banner .superhost-text-group{
+  display: flex;
+  position:relative;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.superhost-banner .superhost-text-group .btn{
+  
+  position:absolute;
+  bottom: -200px;
+  padding:1.2rem;
+  background-color: white;
+  border:0;
+  font-size: 16px;
+  color:#000;
+
+}
+
+footer{
+  max-width: 1620px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  background-color: #f7f7f7;
+  color: #000;
+  line-height: 2.5;
+  padding: 3rem 5rem 1rem 5rem;
+}
+
+footer .helpdesk{
+  flex-basis: 25%;
+  
+}
+
+
+footer .helpdesk li:hover:not(.helpdesk--title){
+  text-decoration: underline;
+}
+footer .helpdesk .helpdesk--title{
+  font-weight: bold;
+}
+footer .footer-list{
+  flex-basis: 100%;
+  display: flex;
+  position:relative;
+  justify-content: space-between;
+  padding: 3rem 1rem 1rem 1rem ;
+  
+}
+footer .footer-list::before{
+  position:absolute;
+  content: '';
+  width: 89rem;
+  top: 1rem;
+  left:0;
+  border-top: 1px solid rgb(200,200,200);
+}
+footer .footer-list .footer-list--main{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap:20px;
+  flex-basis:60%;
+  flex-grow: 1;
+  margin-right: 10%;
+}
+footer .footer-list .footer-list--main li{
+  position: relative;
+}
+
+footer .footer-list .footer-list--main li:hover:not(.copyright){
+  text-decoration: underline;
+}
+
+footer .footer-list .footer-list--main li::before{
+  position:absolute;
+  content:'';
+  border: 1px solid;
+  top: 16px;
+  background-color: #000;
+  border-radius: 50%;
+}
+footer .footer-list .footer-list--main li:nth-child(1):before{
+  left: 120px;
+}
+footer .footer-list .footer-list--main li:nth-child(2):before{
+  left: 123px;
+}
+footer .footer-list .footer-list--main li:nth-child(3):before{
+  left: 65px;
+}
+footer .footer-list .footer-list--main li:nth-child(4):before{
+  left: 65px;
+}
+footer .footer-list .footer-list--main li:nth-child(5):before{
+  left: 158px;
+}
+footer .footer-list .footer-list--main li:nth-child(6):before{
+  display: none;
+}
+
+footer .footer-list .footer-list--nation{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis:20%;
+  
+}
+
+footer .footer-list .footer-list--nation li{
+  display: flex;
+  position:relative;
+}
+footer .footer-list .footer-list--nation li svg{
+  position:absolute;
+  top:2px;
+  left:-15px;
+}
+footer .footer-list .footer-list--nation button{
+  border:0;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+footer .footer-list .footer-list--sns{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis:20%;
+  cursor: pointer;
 }
