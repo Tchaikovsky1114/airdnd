@@ -331,8 +331,42 @@ a{
   
 }
 
+.navigation--logding--guestadd--button{
 
+}
+.guestadd-list-wrapper{
+  position:absolute;
+  width: 400px;
+  top:80px;
+  right: 0;
+  padding:1rem;
+  border-radius: 20px;
+  background-color: #fff;
+  z-index: 9;
+  line-height: 2;
+  
 
+}
+
+.guestadd-list-wrapper .guestadd-lists{
+
+}
+
+.guestadd-list-wrapper .guestadd-lists .guestadd-list{
+  display: flex;
+}
+
+.guestadd-list-wrapper .guestadd-lists .guestadd-list span:first-child{
+
+}
+
+.guestadd-list-wrapper .guestadd-lists .guestadd-list span:nth-child(2){
+
+}
+
+.guestadd-list-wrapper .guestadd-lists .guestadd-list > button{
+ font-size: 14px;
+}
 
 /* search */
 
@@ -689,7 +723,7 @@ a{
 .navigation--lodging .navigation--lodging--list > li:nth-child(4)::before {
   display: none;
 }
-.navigation--lodging .navigation--lodging--list > li:nth-child(4) button {
+.navigation--lodging .navigation--lodging--list > li:nth-child(4) .search-icon {
   position: absolute;
   padding: 1rem;
   background-color: #ff385c;
