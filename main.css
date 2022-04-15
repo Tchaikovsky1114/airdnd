@@ -245,7 +245,63 @@ a{
 .navigation--info--right li:first-child {
   min-width: 75px;
 }
-.navigation--info--right button {
+
+
+
+/* profile-sidebar */
+
+.profile-sidebar{
+  
+  position:fixed;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap:20px;
+  top:115px;
+  right:80px;
+  display: none;
+  width: 180px;;
+  padding:1rem;
+  background-color: #fff;
+  line-height: 3;
+  z-index: 9;
+  border-radius: 20px;
+}
+
+.profile-sidebar .main-lists{
+  
+  font-weight: bold;
+}
+
+.profile-sidebar .main-lists li:last-child{
+  position:relative;
+}
+
+.profile-sidebar .main-lists li:last-child::before{
+  position:absolute;
+  content: '';
+  top:51px;
+  width: 100%;
+  height: 1px;
+  background-color: #c8c8c8;
+}
+
+.profile-sidebar .host-lists li:last-child{
+  position:relative;
+}
+
+.profile-sidebar .host-lists li:last-child::before{
+  position:absolute;
+  content: '';
+  top:51px;
+  width: 100%;
+  height: 1px;
+  background-color: #c8c8c8;
+}
+
+
+
+.navigation--info--right .navigation--profile {
+  position:relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,7 +311,13 @@ a{
   border: 0;
   border-radius: 40px;
   cursor: pointer;
+  
 }
+
+.navigation--info--right .navigation--profile:focus ~ .profile-sidebar{
+  display: flex;
+}
+
 
 .navigation .navigation--info .navigation--info--right img {
   width: 28px;
@@ -525,11 +587,9 @@ a{
 
 
 
+.profile-sidebar .sub-lists{
 
-
-
-
-
+}
 
 
 

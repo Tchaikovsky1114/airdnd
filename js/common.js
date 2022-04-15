@@ -14,9 +14,14 @@ const calandarMaterials = {
   currentMonth: date.getMonth() + 1,
   currentDate: date.getDate(),
 };
+const profileBtn = document.querySelector('.navigation--profile');
 
-
-
+function exitPopup(element){
+window.addEventListener('click', (e) => {
+  e.target === document.querySelector('.wrapper') &&
+    element.remove();
+});
+}
 
 function handleTabListCalandar() {
   document.querySelector('.scadule').classList.remove('show');
@@ -26,12 +31,10 @@ function handleTabListCalandar() {
 }
 
 function handleTabListScadule() {
-  
   document.querySelector('.scadule').classList.add('show');
   document.querySelector('.scadule').classList.remove('hide');
   document.querySelector('.calandar').classList.add('hide');
   document.querySelector('.calandar').classList.remove('show');
-  
 }
 
 function renderCalandar() {
@@ -96,7 +99,6 @@ function renderCalandar() {
   }
 }
 
-
 function handleSearch(e) {
   calandar.remove();
   const lodgingLocationInput = document.querySelector(
@@ -128,43 +130,38 @@ function handleSearch(e) {
     .querySelector('.navigation--lodging--list')
     .appendChild(recentSearchRecord);
 
-  window.addEventListener('click', (e) => {
-    e.target === document.querySelector('.wrapper') &&
-      recentSearchRecord.remove();
-  });
+    exitPopup(recentSearchRecord)
 }
 
 function handleCheckIn(e) {
-
   recentSearchRecord.remove();
 
   document
     .querySelector('.navigation--lodging--list')
     .appendChild(renderCalandar());
 
-  window.addEventListener('click', (e) => {
-    e.target === document.querySelector('.wrapper') && calandar.remove();
-  });
+    exitPopup(calandar);
 
-  document.querySelector('.tab-calandar').addEventListener('click',handleTabListCalandar);   
-  document.querySelector('.tab-scadule').addEventListener('click', handleTabListScadule)
- 
+  document
+    .querySelector('.tab-calandar')
+    .addEventListener('click', handleTabListCalandar);
+  document
+    .querySelector('.tab-scadule')
+    .addEventListener('click', handleTabListScadule);
 }
 
 
 
+
+function handleProfileSidebar(){
+  const profileSidebar = document.querySelector('.profile-sidebar');
+  
+  profileSidebar.classList.toggle('hide');
+  
+
+}
+
 lodgingLocation.addEventListener('click', handleSearch);
 logdingCheckIn.addEventListener('click', handleCheckIn);
 logdingCheckOut.addEventListener('click', handleCheckIn);
-;
-
-
-// const swiper = new Swiper('.swiper',{
-//   pagination: {
-//     el: 6,
-//   },
-//   navigation:{
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev'
-//   }
-// })
+profileBtn.addEventListener('click',handleProfileSidebar)
