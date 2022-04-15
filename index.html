@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    rel="stylesheet">
     <link rel="stylesheet" href="./main.css" />
+    <script defer src="./js/common.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -33,9 +42,9 @@
               </svg>
             </div>
             <ul class="navigation--info--center">
-              <li>숙소</li>
-              <li>체험</li>
-              <li>온라인 체험</li>
+              <li><button><span>숙소</span></button> </li>
+              <li><button><span>체험</span></button></li>
+              <li><button><span>온라인 체험</span></button></li>
             </ul>
             <ul class="navigation--info--right">
               <li>호스트 되기</li>
@@ -91,10 +100,13 @@
             </ul>
           </div>
           <div class="navigation--lodging">
-            <ul>
-              <li>위치<br /><span>어디로 여행가세요?</span></li>
-              <li>체크인<br /><span>날짜 입력</span></li>
-              <li>체크아웃<br /><span>날짜 입력</span></li>
+            <ul class="navigation--lodging--list">
+              
+              <li class="navigation--lodging--location">
+                <label for="">&NegativeVeryThinSpace; 위치<input type="text" placeholder="어디로 여행가세요?" class="navigation--lodging--search-input" />
+                </label> </li>
+              <li class="navigation--lodging--checkin">체크인<br /><span>날짜 입력</span></li>
+              <li class="navigation--lodging--checkout">체크아웃<br /><span>날짜 입력</span></li>
               <li>
                 인원<br /><span>게스트 추가</span>
                 <button>
@@ -148,7 +160,6 @@
           </div>
         </div>
       </section>
-
 
       <section class="travel-banner">
         <span class="travel-title">설레는 다음 여행을 위한 아이디어</span>
@@ -310,5 +321,9 @@
         </ul>
       </div>
     </footer>
+
+
+
+
   </body>
 </html>
