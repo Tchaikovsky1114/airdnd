@@ -20,7 +20,9 @@ const guestBtnGroup = document.querySelectorAll(
   '.guestadd-list .button-group'
 );
 const guestAddLists = document.querySelector('.guestadd-lists')
-
+const lodgingLocationInput = document.querySelector(
+  '.navigation--lodging--search-input'
+);
 
 
 function exitPopup(element) {
@@ -107,9 +109,7 @@ function renderCalandar() {
 
 function handleSearch(e) {
   calandar.remove();
-  const lodgingLocationInput = document.querySelector(
-    '.navigation--lodging--search-input'
-  );
+  
   let template = `
   <div class="search-record">
   <div>
@@ -128,15 +128,16 @@ function handleSearch(e) {
   </div>
   
   `;
-  lodgingLocationInput.focus();
+  
 
   recentSearchRecord.innerHTML = template;
 
   document
     .querySelector('.navigation--lodging--list')
     .appendChild(recentSearchRecord);
-
+    
   exitPopup(recentSearchRecord);
+
 }
 
 function handleCheckIn(e) {
@@ -201,8 +202,21 @@ function handleGuestNumber(e) {
     
   }
 
+const searchBtn = document.querySelector('.search-icon');
 
 
+function handleFocusSearchTravel(){
+  lodgingLocationInput.focus();
+  handleSearch();
+  searchBtn.classList.add('opensearch');
+  
+}
+
+lodgingLocationInput.addEventListener('focus',handleFocusSearchTravel)
+searchBtn.addEventListener('click',handleFocusSearchTravel)
+lodgingLocationInput.addEventListener('blur',()=>{
+  searchBtn.classList.remove('opensearch');
+})
 
 guestAddLists.addEventListener('click', handleGuestNumber);
 
@@ -211,3 +225,31 @@ logdingCheckIn.addEventListener('click', handleCheckIn);
 logdingCheckOut.addEventListener('click', handleCheckIn);
 profileBtn.addEventListener('click', handleProfileSidebar);
 callGuestList.addEventListener('click', handleGuestAddModal);
+
+
+
+
+const option = {
+  threshold: 0.05
+}
+
+const callback = (entries,observer) =>{
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting){
+      
+      document.querySelector('.navigation h1').classList.add('hide');
+      document.querySelector('.navigation--info--center').classList.add('hide');
+      document.querySelector('.navigation--lodging').classList.add('hide');
+    }else{
+    document.querySelector('.navigation h1').classList.remove('hide');
+    document.querySelector('.navigation--info--center').classList.remove('hide');
+    document.querySelector('.navigation--lodging').classList.remove('hide');
+    }
+    
+  });
+  
+};
+
+const observer = new IntersectionObserver(callback,option);
+observer.observe(document.querySelector('.main-banner'))
+

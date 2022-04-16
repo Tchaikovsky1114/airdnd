@@ -12,6 +12,11 @@ a{
   text-decoration: none;
   color:#000;
 }
+
+
+
+
+
 .btn {
   border: 1px solid;
   border-radius: 0.5rem;
@@ -32,6 +37,13 @@ a{
 }
 
 
+.observer{
+  width:100%;
+  height: 10px;
+  position:absolute;
+  background-color: #000;
+  top:780px;
+}
 
 
 .wrapper {
@@ -40,9 +52,14 @@ a{
   position: relative;
 }
 .navigation {
+  width: 90%;
+  position: fixed;
+  z-index: 99;
+  
 }
 .navigation h1 {
   text-align: center;
+  
 }
 .navigation h1 a {
   text-decoration: underline;
@@ -830,16 +847,49 @@ cursor: pointer;
 .navigation--lodging .navigation--lodging--list > li:nth-child(4)::before {
   display: none;
 }
-.navigation--lodging .navigation--lodging--list > li:nth-child(4) .search-icon {
+
+.search-icon{
   position: absolute;
   padding: 1rem;
   background-color: #ff385c;
   border-radius: 50%;
-  right: 10px;
-  bottom: 8px;
+  
+  right: 20px;
+  bottom: 16px;
   border: 0;
   cursor: pointer;
+  z-index: 10;
+  color:white;
+  box-sizing: border-box;
+  
 }
+
+.search-icon.opensearch{
+  right: 5px;
+  display: flex;
+  padding: 1.5rem 3rem;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
+  transition: .2s;
+}
+.search-icon.opensearch svg{
+  position:absolute;
+  
+  top:15px;
+  left:10px;
+}
+.search-icon.opensearch::before{
+  position:absolute;
+  content: '검색';
+  top:12px;
+  right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: .2s;
+}
+
 .navigation--lodging .navigation--lodging--list > li:nth-child(4) svg {
   color: white;
 }
@@ -852,7 +902,7 @@ cursor: pointer;
 }
 
 .top-banner {
-  margin-top: 5rem;
+  margin-top: 17rem;
   height: 450px;
 }
 
