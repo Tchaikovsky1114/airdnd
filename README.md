@@ -20,6 +20,9 @@
 ![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/96774661/163691199-324c8923-2939-4119-bfe5-b925e6098a81.gif)
 
 <br/>
+
+
+
 ### 2. 네비게이션 중앙의 다양한 pop-up 기능
 ![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/96774661/163691202-194c8114-149a-43e3-9a75-116447aa5af6.gif)
 
