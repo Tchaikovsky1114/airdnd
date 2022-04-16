@@ -52,12 +52,15 @@ a{
   position: relative;
 }
 .navigation {
-  width: 90%;
+  width: 100%;
   position: fixed;
   z-index: 99;
-  
+  margin:0;
+  right:-10px;
+  transition: background-color 0.4s;
 }
 .navigation h1 {
+  padding-top:10px;
   text-align: center;
   
 }
@@ -77,19 +80,22 @@ a{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
 
 .navigation--info {
   display: flex;
   width: 100%;
   padding-top: 0.5rem;
-  justify-content: space-arounce;
+  justify-content: space-around;
   align-items: center;
 }
 
 .navigation--info--left {
-  flex-basis: 0;
-  flex-grow: 2;
+  
+  flex-basis: 1;
+  flex-grow: 1;
+  margin-left: 2rem;
 }
 
 .navigation--info .navigation--info--left {
@@ -97,28 +103,26 @@ a{
 }
 
 .navigation--info--center {
+  width: fit-content;
   display: flex;
+  position: absolute;
   justify-content: center;
   align-items: center;
-  flex-grow: 7;
-  margin-left: 5rem;
-
-  padding: 2rem 0;
   font-size: 16px;
+  transition: 0.4s;
 }
 
 .navigation--info--center li {
   cursor: pointer;
-  padding: 0rem 2rem;
+  padding: 0rem 1rem;
   position: relative;
   transition: .4s;
-  
 }
 
 .navigation--info--center li button{
   font-size: 16px;
   border:0;
-  background-color: #000;
+  background-color: transparent;
   color:white;
   cursor: pointer;
   transition: 0.2s;
@@ -131,7 +135,7 @@ a{
 .navigation--info--center li:first-child::before{
   position: absolute;
   top: 30px;
-  right: 60px;
+  right: 30px;
   content: '';
   width: 0;
   border-bottom: 1px solid;
@@ -140,7 +144,7 @@ a{
 .navigation--info--center li:first-child:hover::before {
   position: absolute;
   top: 30px;
-  right: 50px;
+  right: 35px;
   content: '';
   width: 5px;
   border-bottom: 1px solid;
@@ -151,7 +155,7 @@ a{
 .navigation--info--center li:first-child button:focus::before{
   position: absolute;
   top: 28px;
-  right: 44px;
+  right: 28px;
   content: '';
   width: 20px;
   border-bottom: 3px solid;
@@ -169,7 +173,7 @@ a{
 .navigation--info--center li:nth-child(2) button:focus::before{
   position: absolute;
   top: 28px;
-  right: 44px;
+  right: 27px;
   content: '';
   width: 20px;
   border-bottom: 3px solid;
@@ -178,7 +182,7 @@ a{
 .navigation--info--center li:nth-child(2)::before{
   position: absolute;
   top: 30px;
-  right: 60px;
+  right: 30px;
   content: '';
   width: 0;
   border-bottom: 1px solid;
@@ -188,7 +192,7 @@ a{
 .navigation--info--center li:nth-child(2):hover::before {
   position: absolute;
   top: 30px;
-  right: 50px;
+  right: 35px;
   content: '';
   width: 5px;
   border-bottom: 1px solid;
@@ -209,7 +213,7 @@ a{
 .navigation--info--center li:nth-child(3):hover::before {
   position: absolute;
   top: 30px;
-  right: 74px;
+  right: 60px;
   content: '';
   width: 5px;
   border-bottom: 1px solid;
@@ -218,15 +222,18 @@ a{
 
 
 .navigation--info--right {
+  position:absolute;
+  right:90px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  flex-basis: 0;
-  flex-grow: 1;
-  gap: 1rem;
+  flex-basis: 1;
+  flex-grow: 0;
+  gap:1rem;
   font-weight: bold;
   cursor: pointer;
   box-sizing: border-box;
+  
 }
 
 .navigation--info--right li {
@@ -273,7 +280,7 @@ a{
   flex-direction: column;
   justify-content: flex-start;
   row-gap:20px;
-  top:115px;
+  top:140px;
   right:80px;
   display: none;
   width: 180px;;
@@ -472,8 +479,12 @@ cursor: pointer;
 
 /* search */
 
-.modal-container{
+
+
+.navigation--lodging{
+  margin-top: 2rem;
 }
+
 .navigation--lodging .search-record{
   background-color: #FFF;
   position:absolute;
@@ -562,22 +573,6 @@ cursor: pointer;
   font-size: 16px;
   font-weight: 400;
 }
-
-.navigation--logding--guestadd{
-  
-}
-
-
-.navigation--logding--guestadd .navigation--logding--guestadd--button{
- 
-
-}
-
-
-.navigation--logding--guestadd .navigation--logding--guestadd--button:focus{
-  width: 200px;
-}
-
 
 /* calandar */
 

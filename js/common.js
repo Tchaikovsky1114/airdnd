@@ -240,10 +240,20 @@ const callback = (entries,observer) =>{
       document.querySelector('.navigation h1').classList.add('hide');
       document.querySelector('.navigation--info--center').classList.add('hide');
       document.querySelector('.navigation--lodging').classList.add('hide');
+      document.querySelector('.navigation').style.backgroundColor = '#fff';
+      document.querySelector('.navigation').style.color = '#000';
+      document.querySelector('.navigation').style.top = '0';
+      document.querySelector('.navigation').style.right = '0';
+      document.querySelector('.logo').style.fill = '#FF385C';
+   
     }else{
     document.querySelector('.navigation h1').classList.remove('hide');
     document.querySelector('.navigation--info--center').classList.remove('hide');
     document.querySelector('.navigation--lodging').classList.remove('hide');
+    document.querySelector('.navigation').style.color = '#fff';
+    document.querySelector('.navigation').style.backgroundColor = '#000';
+    document.querySelector('.navigation').style.right = '-10px';
+    document.querySelector('.logo').style.fill = 'currentcolor';
     }
     
   });
