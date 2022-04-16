@@ -230,7 +230,8 @@ callGuestList.addEventListener('click', handleGuestAddModal);
 
 
 const option = {
-  threshold: 0.05
+  rootMargin: '2500px 0px',
+  threshold: 0.1,
 }
 
 const callback = (entries,observer) =>{
@@ -261,5 +262,11 @@ const callback = (entries,observer) =>{
 };
 
 const observer = new IntersectionObserver(callback,option);
-observer.observe(document.querySelector('.main-banner'))
+
+const observerBox = Array.from(document.querySelectorAll('.observer'));
+
+observerBox.forEach((el) => {
+  observer.observe(el);  
+})
+
 
