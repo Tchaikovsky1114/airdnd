@@ -15,12 +15,18 @@ const calandarMaterials = {
   currentDate: date.getDate(),
 };
 const profileBtn = document.querySelector('.navigation--profile');
+const callGuestList = document.querySelector('.navigation--logding--guestadd');
+const guestBtnGroup = document.querySelectorAll(
+  '.guestadd-list .button-group'
+);
+const guestAddLists = document.querySelector('.guestadd-lists')
 
-function exitPopup(element){
-window.addEventListener('click', (e) => {
-  e.target === document.querySelector('.wrapper') &&
-    element.remove();
-});
+
+
+function exitPopup(element) {
+  window.addEventListener('click', (e) => {
+    e.target === document.querySelector('.wrapper') && element.remove();
+  });
 }
 
 function handleTabListCalandar() {
@@ -130,7 +136,7 @@ function handleSearch(e) {
     .querySelector('.navigation--lodging--list')
     .appendChild(recentSearchRecord);
 
-    exitPopup(recentSearchRecord)
+  exitPopup(recentSearchRecord);
 }
 
 function handleCheckIn(e) {
@@ -140,7 +146,7 @@ function handleCheckIn(e) {
     .querySelector('.navigation--lodging--list')
     .appendChild(renderCalandar());
 
-    exitPopup(calandar);
+  exitPopup(calandar);
 
   document
     .querySelector('.tab-calandar')
@@ -150,18 +156,58 @@ function handleCheckIn(e) {
     .addEventListener('click', handleTabListScadule);
 }
 
-
-
-
-function handleProfileSidebar(){
+function handleProfileSidebar() {
   const profileSidebar = document.querySelector('.profile-sidebar');
-  
+
   profileSidebar.classList.toggle('hide');
+}
+
+const guestQuantityList = {
+  adult: 0,
+  children: 0,
+  child: 0,
+  pet:0,
+}
+
+
+
+
+
+function handleGuestAddModal() {
+  const guestAddList = document.querySelector('.guestadd-list-wrapper');
+  guestAddList.classList.toggle('hide');
   
 
+  
 }
+
+function handleGuestNumber(e) {
+  const guestPlusBtn = document.querySelectorAll('.guest--plus--button');
+  const guestMinusBtn = document.querySelectorAll('.guest--minus--button');
+  const guestNumberEls = document.querySelectorAll('.guest-number');
+
+  
+  
+    for(let i = 0; i < guestPlusBtn.length; i++){
+      if(e.target === guestPlusBtn[i]){
+        +guestNumberEls[i].textContent++        
+      }
+      if(e.target === guestMinusBtn[i] && +guestNumberEls[i].textContent > 0){
+        +guestNumberEls[i].textContent--;
+      }
+    }
+    const guestCountArray = Array.from(guestNumberEls);
+    const newArray = guestCountArray.map(count => count.textContent);
+    
+  }
+
+
+
+
+guestAddLists.addEventListener('click', handleGuestNumber);
 
 lodgingLocation.addEventListener('click', handleSearch);
 logdingCheckIn.addEventListener('click', handleCheckIn);
 logdingCheckOut.addEventListener('click', handleCheckIn);
-profileBtn.addEventListener('click',handleProfileSidebar)
+profileBtn.addEventListener('click', handleProfileSidebar);
+callGuestList.addEventListener('click', handleGuestAddModal);
