@@ -21,19 +21,61 @@
 
 <br/>
 
+<br/>
+
+<br/>
+
+<br/>
+
+
 
 
 ### 2. 네비게이션 중앙의 다양한 pop-up 기능
 ![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/96774661/163691202-194c8114-149a-43e3-9a75-116447aa5af6.gif)
 
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+
 ### 3. 연령, 생물(?)에 맞는 guest추가 기능
 ![ezgif com-gif-maker (7)](https://user-images.githubusercontent.com/96774661/163691204-41dc87c3-89f6-4cbf-9f18-64cf71b32ce0.gif)
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
 
 ### 4. profile sidebar 기능
 ![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/96774661/163691205-03cb3a2d-afd7-46c1-b31d-b50b3e04cdd1.gif)
 
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+
 ### 5. 전체 감상 😊
 ![ezgif com-gif-maker (9)](https://user-images.githubusercontent.com/96774661/163691208-99b3b9ce-6e44-46b2-87a4-69dfe7216361.gif)
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
 
 
 ### 느낀점
