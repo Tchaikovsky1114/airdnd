@@ -1,15 +1,32 @@
 # airdnd 😅
 
+<br/>
+
+<br/>
+
 
 # 📑 과제 개요
 
 꼭 한번 만들어 보고 싶었던 airbnb ! 벽은 높았다..
+
+<br/>
+
+<br/>
+
+<br/>
+
 
 # 🛠 기술 스택
 
 - HTML
 - CSS
 - Javascript
+
+<br/>
+
+<br/>
+
+<br/>
 
 # 🍀 주요 기능
 
