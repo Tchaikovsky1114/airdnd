@@ -1,0 +1,22 @@
+{
+  "name": "airdnd",
+  "version": "1.0.0",
+  "description": "<br/>",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(hello,world)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tchaikovsky1114/airdnd.git"
+  },
+  "keywords": [
+    "airdnd"
+  ],
+  "author": "Tchaikovsky1114",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tchaikovsky1114/airdnd/issues"
+  },
+  "homepage": "https://github.com/Tchaikovsky1114/airdnd"
+}
